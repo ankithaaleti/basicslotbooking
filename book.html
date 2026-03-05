@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Slot</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+}
+
+form{
+border:1px solid black;
+width:300px;
+margin:auto;
+padding:20px;
+}
+
+input{
+width:90%;
+padding:8px;
+margin:10px 0;
+}
+
+button{
+background-color:blue;
+color:white;
+padding:8px 15px;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Book Slot</h2>
+
+<form action="/book_slot" method="post">
+
+<label>Name</label>
+<br>
+<input type="text" name="name" required>
+
+<br>
+
+<label>Slot Time</label>
+<br>
+<input type="text" name="slot" required>
+
+<br><br>
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+
+<br>
+
+<a href="index.html">Back</a>
+
+</body>
+</html>
