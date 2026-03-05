@@ -1,8 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import urllib.parse
 import db
-import os
-port=int(os.environ.get("PORT",8000))
 class SlotServer(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
@@ -66,7 +64,7 @@ class SlotServer(BaseHTTPRequestHandler):
             self.send_header('Location','/bookings')
             self.end_headers()
 def run():
-    server = HTTPServer(("0.0.0.0",port), SlotServer)
+    server = HTTPServer(("localhost",8000), SlotServer)
     print("Server running on http://localhost:8000")
     server.serve_forever()
 run()
